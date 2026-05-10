@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary: #64748b;
+  --bg-main: #ffffff;
+  --bg-soft: #f8fafc;
+  --border: #e2e8f0;
+}
+
+body {
+  font-family: var(--font-inter);
+  @apply bg-white text-slate-900 antialiased;
+}
+
+/* Simple Button Styles */
+.btn-primary {
+  @apply bg-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-sm active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-white text-slate-700 px-6 py-2.5 rounded-lg font-semibold border border-slate-200 hover:bg-slate-50 transition-colors shadow-sm active:scale-95;
+}
+
+/* Simple Card Styles */
+.card {
+  @apply bg-white rounded-xl border border-slate-200 p-4 hover:border-blue-300 transition-colors;
+}
+
+/* Simple Form Inputs */
+.input-field {
+  @apply w-full px-4 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all;
+}
+
+/* Layout Utilities */
+.section-padding {
+  @apply py-12 md:py-20;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Navbar & Footer Specifics */
+.nav-link {
+  @apply text-slate-600 hover:text-blue-600 font-medium transition-colors;
+}
+
+/* Custom Scrollbar (Simple) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+
+/* Animations (Minimal) */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
